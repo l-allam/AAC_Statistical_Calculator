@@ -70,7 +70,6 @@ for folder, subfolder, files in os.walk(workfold):
                                 angle_data.loc[len(angle_data.index)] = [str(well), average(inc), AAC, max(inc), min(inc)]
                                 break
             except KeyError:
-                # os.remove(filePath)
                 continue
 
 angle_data = angle_data[abs(angle_data['AVG']) < 10]
